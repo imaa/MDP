@@ -13,7 +13,6 @@
         android:layout_height="126dp" />
 
     <ImageView
-        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/dd_logo" />
@@ -42,7 +41,6 @@
         android:hint="Add new food ..." />
 
     <Button
-        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="addFoodClickEvent"
@@ -54,7 +52,6 @@
     android:gravity="center|bottom"
     android:orientation="vertical">
     <Button
-        android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|center"
