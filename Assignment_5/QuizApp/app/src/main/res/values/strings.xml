@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="Q1">Q 1:What is Kotlin?</string>
+    <string-array name="Q1Answers">
+        <item>Android Library</item>
+        <item>Programing Language</item>
+        <item>Android Core</item>
+    </string-array>
+    <string name="Q2">Q 2: Check all true?</string>
+    <string-array name="Q2Answers">
+        <item>Kotlin is Modern and expressive</item>
+        <item>Kotlin Support OOP </item>
+        <item>Kotlin does not Support Functional Programing</item>
+    </string-array>
+    <string name="Submit">Submit</string>`
+    <string name="Reset">Reset</string>
+</resources>
