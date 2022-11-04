@@ -7,7 +7,7 @@
     <string name="sign_in">Sign in</string>
     <string name="create_account">Create a new account</string>
     <string name="create_account2">Create account</string>
-<string name="required">* required fields</string>
+    <string name="required">* required fields</string>
     <string name="first_name">First name (required)</string>
     <string name="last_name">Last name (required)</string>
     <string name="register">Create your account</string>
@@ -16,4 +16,10 @@
     <string name="Clothing">Clothing</string>
     <string name="Beauty">Beauty</string>
     <string name="Food">Food</string>
+    <string name="Title">Title:</string>
+    <string name="Description">Item Description:</string>
+    <string name="Price">Price:</string>
+    <string name="Color">Color:</string>
+    <string name="productNumber">Walmart #:</string>
+
 </resources>

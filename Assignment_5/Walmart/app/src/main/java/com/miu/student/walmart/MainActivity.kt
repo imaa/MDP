@@ -8,7 +8,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var users : ArrayList<User>
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -60,5 +59,6 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
