@@ -8,13 +8,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="232dp"
-        android:layout_height="51dp"
+        android:layout_width="288dp"
+        android:layout_height="79dp"
         android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/laptop" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView"
