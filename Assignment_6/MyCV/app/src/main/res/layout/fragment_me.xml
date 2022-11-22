@@ -1,13 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.Me">
-
-    <TextView
+    tools:context=".fragments.Me"
+    android:orientation="vertical">
+<!-- Image in the top of this fragment -->
+    <RelativeLayout
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/banner" />
+        <!-- Image over the above image -->
+        <net.darkguard.drtools.circularimageview.CircularImageView
+
+            android:layout_width="151dp"
+            android:layout_height="148dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/mypic">
+
+        </net.darkguard.drtools.circularimageview.CircularImageView>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <GridLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
-</androidx.core.widget.NestedScrollView>
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:columnCount="1"
+        >
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ibrahim Abu Lubad"
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:gravity="center"></TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tampa, Fl"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"
+                android:gravity="center"></TextView>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fairfield Iowa, United States"
+                android:textSize="15sp"
+                android:textColor="#423F3F"
+                android:layout_marginTop="5dp"
+                android:gravity="center"></TextView>
+        </TableRow>
+        <TableRow>
+            <androidx.cardview.widget.CardView >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textSize="30sp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"></TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/a_challenging_career_opportunity_in_information_technology_that_enables_me_to_employ_my_current_qualifications_knowledge_skills_on_software_engineering_methodologies_as_a_system_analysis_and_design_is_networking_especially_in_programming_n_1_c_and_t_sql_n_2_java_script_angularjs_extjs_and_jquery_n_3_ms_sql_server_2012_2008_2005_n_4_microsoft_visual_studio_2012_2010_2008_n_5_smart_draw_ms_viso_n_6_iis_8_n_7_team_foundation_2010_source_safe_n_8_sharepoint_2013_n_9_k2_blackpearl_smartforms"
+                    android:inputType="textMultiLine"
+                    android:layout_gravity="left"
+                    android:textAlignment="textStart"
+                    android:textSize="15sp"
+                    android:textColor="#423F3F"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    tools:ignore="RtlCompat" />
+            </androidx.cardview.widget.CardView>
+        </TableRow>
+    </GridLayout>
+    </ScrollView>
+
+</LinearLayout>
