@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
             android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN,
             android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.viewPager.adapter = ViewPagerAdapter(this)
@@ -28,7 +29,6 @@ class MainActivity : AppCompatActivity() {
                 1 -> "Experience"
                 2 -> "Education"
                 3 -> "Certification"
-                4 -> "Projects"
                 else -> "Contact"
             }
             //set icon for each tab
@@ -37,7 +37,6 @@ class MainActivity : AppCompatActivity() {
                 1 -> R.drawable.work
                 2 -> R.drawable.school
                 3 -> R.drawable.certification
-                4 -> R.drawable.projects
                 else -> R.drawable.contact
             })
         }.attach()

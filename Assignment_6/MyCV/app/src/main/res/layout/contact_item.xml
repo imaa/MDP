@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="20dp"
+    android:layout_height="wrap_content" android:orientation="vertical">
+    <!--Product item  data class Product(var  Title:String,var price:Double,var color:String,var image:String,var itemid:String,var desc:String)-->
+<GridLayout
+    android:layout_width="match_parent" android:columnCount="2"
+    android:layout_height="wrap_content" android:orientation="horizontal">
+<TableRow android:layout_marginTop="10dp">
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+</TableRow>
+    <TableRow android:layout_rowWeight="1">
+        <GridLayout
+            android:layout_width="match_parent" android:columnCount="1"
+            android:layout_height="wrap_content" android:orientation="horizontal">
+
+            <TableRow android:layout_rowWeight="1">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="title"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"  />
+            </TableRow>
+            <TableRow android:layout_rowWeight="1">
+                <TextView
+                    android:id="@+id/subTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="subTitle"
+                    android:textSize="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"  />
+            </TableRow>
+            <TableRow android:layout_rowWeight="1"/>
+            <TableRow android:layout_rowWeight="1"/>
+        </GridLayout>
+    </TableRow>
+    <TableRow  android:layout_columnSpan="2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp"/>
+</GridLayout>
+
+
+
+
+</LinearLayout>
