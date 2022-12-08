@@ -56,19 +56,19 @@ class MainActivity : AppCompatActivity() {
                 when (it.itemId) {
                     R.id.whatsApp -> {
                         var intent = android.content.Intent(android.content.Intent.ACTION_VIEW)
-                        intent.data = android.net.Uri.parse("https://wa.me/3196770270")
+                        intent.data = android.net.Uri.parse("https://wa.me/13196770270")
                         startActivity(intent)
                         return@setOnMenuItemClickListener true
                     }
                     R.id.facebook -> {
                         var intent = android.content.Intent(android.content.Intent.ACTION_VIEW)
-                        intent.data = android.net.Uri.parse("https://www.facebook.com/aroi2imaa")
+                        intent.data = android.net.Uri.parse("https://m.facebook.com/aroi2imaa")
                         startActivity(intent)
                         return@setOnMenuItemClickListener true
                     }
                     R.id.instagram -> {
                         var intent = android.content.Intent(android.content.Intent.ACTION_VIEW)
-                        intent.data = android.net.Uri.parse("https://www.instagram.com/ibrahimabulubbad")
+                        intent.data = android.net.Uri.parse("https://m.instagram.com/ibrahimabulubbad")
                         startActivity(intent)
                         return@setOnMenuItemClickListener true
                     }
