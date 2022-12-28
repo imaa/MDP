@@ -34,7 +34,7 @@ class QuestionsHelper {
                         Answer(text = "drawable", isCorrect = false, id = 9),
                         Answer(text = "layout", isCorrect = false, id = 10),
                         Answer(text = "string", isCorrect = false, id = 11),
-                        Answer(text = "color", isCorrect = false,   id = 12)),
+                        Answer(text = "color", isCorrect = false,   id = 12),
                         Answer(text = "font", isCorrect = true,  id = 13)
                     )
                 ),
