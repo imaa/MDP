@@ -25,12 +25,28 @@
             app:destination="@id/resultFragment"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim" />
+
+        <argument
+            android:name="questions"
+            app:argType="com.miu.student.quizapp.data.domain.Question[]" />
+        <argument
+            android:name="questionIndex"
+            app:argType="integer" />
+        <argument
+            android:name="timeRemaining"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_questionFragment_self"
+            app:destination="@id/questionFragment" />
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.miu.student.quizapp.fragments.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="questions"
+            app:argType="com.miu.student.quizapp.data.domain.Question[]" />
         <action
             android:id="@+id/action_resultFragment_to_analysisFragment"
             app:destination="@id/analysisFragment"
@@ -42,6 +58,9 @@
         android:name="com.miu.student.quizapp.fragments.AnalysisFragment"
         android:label="fragment_analysis"
         tools:layout="@layout/fragment_analysis" >
+        <argument
+            android:name="questions"
+            app:argType="com.miu.student.quizapp.data.domain.Question[]" />
         <action
             android:id="@+id/action_analysisFragment_to_homeFragment"
             app:destination="@id/homeFragment"

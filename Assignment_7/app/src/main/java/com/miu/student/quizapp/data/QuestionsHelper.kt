@@ -2,7 +2,6 @@ package com.miu.student.quizapp.data
 
 import android.os.AsyncTask
 import com.miu.student.quizapp.QuizApp
-import com.miu.student.quizapp.data.database.AppDatabase
 import com.miu.student.quizapp.data.domain.Answer
 import com.miu.student.quizapp.data.domain.Question
 
