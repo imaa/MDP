@@ -6,13 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.RadioButton
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.miu.student.quizapp.R
 import com.miu.student.quizapp.data.domain.Question
 import com.miu.student.quizapp.databinding.FragmentQuestionBinding
+import kotlinx.android.synthetic.main.fragment_question.*
 
 class QuestionFragment : Fragment() {
 
@@ -31,7 +35,23 @@ class QuestionFragment : Fragment() {
         binding = FragmentQuestionBinding.bind(view)
         binding.apply {
             questionNumber.text = "Question ${nargs.questionIndex + 1} of ${questions.size}"
+            goHomeButton.setOnClickListener {
+                val directions =
+                    QuestionFragmentDirections.actionQuestionFragmentToHomeFragment()
+                findNavController().navigate(directions)
+            }
             nextButton.setOnClickListener {
+                val selectedId = answers.checkedRadioButtonId
+                if(selectedId==-1){
+                    //show not selected error toast message
+                    val shakeAnimation: Animation = AnimationUtils.loadAnimation(context, R.anim.shake)
+                    answers.startAnimation(shakeAnimation)
+                    Toast.makeText(context, "Please select an answer", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                questions[nargs.questionIndex].selectedAnswer = questions[nargs.questionIndex].answers?.find {
+                    it.id == selectedId
+                }
                 if (nargs.questionIndex == questions.size - 1) {
                     val directions =
                         QuestionFragmentDirections.actionQuestionFragmentToResultFragment(questions)
@@ -63,6 +83,7 @@ class QuestionFragment : Fragment() {
         for (answer in question.answers!!) {
             val radioButton = RadioButton(context)
             radioButton.text = answer.text
+            radioButton.id = answer.id!!
             binding.answers.addView(radioButton)
         }
     }
@@ -83,6 +104,9 @@ class QuestionFragment : Fragment() {
             }
 
             override fun onFinish() {
+                val directions =
+                    QuestionFragmentDirections.actionQuestionFragmentToResultFragment(questions)
+                findNavController().navigate(directions)
             }
         }.start()
     }

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark"
     tools:context=".fragments.QuestionFragment"
+    android:id="@+id/fragmentContainer"
     android:orientation="vertical">
     <TextView
         android:id="@+id/timer"
@@ -48,6 +49,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/go_home_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go Home"
         android:gravity="center" />
 
 </LinearLayout>
